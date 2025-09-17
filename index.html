@@ -1,19 +1,175 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web Rápido</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Taller de Reparación de Motosierras y Desmalezadoras</title>
+    
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Opcional, para una mejor tipografía) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Efecto de superposición oscura sobre la imagen de fondo para que el texto sea legible */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1920x1080/222/FFF?text=Imagen+de+Taller');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efecto parallax */
+        }
+    </style>
 </head>
-<body>
-    <div class="video-background">
-        <video autoplay muted loop id="myVideo">
-            </video>
-    </div>
-    <div class="content">
-        <h1>¡Mi Página Web Funciona!</h1>
-        <p>Publicada rápidamente con GitHub Pages.</p>
-    </div>
+<body class="bg-gray-900 text-white">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-orange-500">
+                <!-- CAMBIAR: Poné acá el nombre de tu taller -->
+                Tu Taller Mecánico
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#servicios" class="hover:text-orange-500 transition duration-300">Servicios</a>
+                <a href="#nosotros" class="hover:text-orange-500 transition duration-300">Nosotros</a>
+                <a href="#contacto" class="hover:text-orange-500 transition duration-300">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <main>
+        <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-wider">Servicio Técnico Especializado</h1>
+                <p class="text-lg md:text-2xl mt-4 text-gray-300">Mantenimiento y reparación de motosierras, desmalezadoras y herramientas de jardín.</p>
+                <a href="#contacto" class="mt-8 inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg uppercase transition duration-300">
+                    Contactanos
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SERVICIOS -->
+        <section id="servicios" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Nuestros Servicios</h2>
+                <p class="text-gray-400 mb-12">Soluciones para todas tus herramientas a motor.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition duration-300">
+                        <div class="text-orange-500 mb-4">
+                            <!-- Ícono de Motosierra (SVG) -->
+                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 7.879l-1.414-1.414L3 16.243V19h2.757l9.76-9.762-1.414-1.414zM16 4l-1.414 1.414 2.828 2.828L18.828 7A2 2 0 0015 4.172V4z M7 18H5v-2h2v2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Reparación de Motosierras</h3>
+                        <p class="text-gray-400">Diagnóstico completo, reparación de motor, carburación y sistemas de corte.</p>
+                    </div>
+                    
+                    <!-- Servicio 2 -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition duration-300">
+                        <div class="text-orange-500 mb-4">
+                           <!-- Ícono de Desmalezadora (SVG) -->
+                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.8 14.222l-1.5 1.5M11 17.556V21h2v-3.444M16.2 14.222l1.5 1.5M12 6a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Reparación de Desmalezadoras</h3>
+                        <p class="text-gray-400">Ajuste de cabezales, sistemas de arranque, embragues y servicio de motor.</p>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition duration-300">
+                         <div class="text-orange-500 mb-4">
+                           <!-- Ícono de Herramienta (SVG) -->
+                           <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Mantenimiento General</h3>
+                        <p class="text-gray-400">Afilado de cadenas, cambio de aceite, limpieza de filtros y puesta a punto completa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN SOBRE NOSOTROS -->
+        <section id="nosotros" class="py-20">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-12">¿Por Qué Elegirnos?</h2>
+                 <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                     <div class="text-center">
+                         <h3 class="text-xl font-bold text-orange-500 mb-2">Experiencia Práctica</h3>
+                         <p class="text-gray-400">Años de conocimiento y pasión por la mecánica para garantizar un trabajo bien hecho.</p>
+                     </div>
+                     <div class="text-center">
+                         <h3 class="text-xl font-bold text-orange-500 mb-2">Presupuesto Sin Cargo</h3>
+                         <p class="text-gray-400">Revisamos tu máquina y te damos un presupuesto claro y honesto antes de empezar.</p>
+                     </div>
+                     <div class="text-center">
+                         <h3 class="text-xl font-bold text-orange-500 mb-2">Atención Personalizada</h3>
+                         <p class="text-gray-400">Trato directo y enfocado en encontrar la mejor solución para vos y tu herramienta.</p>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Ponete en Contacto</h2>
+                <p class="text-gray-400 mb-12">Tu consulta no molesta. ¡Escribinos o llamanos!</p>
+
+                <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+                    
+                    <!-- Contacto por WhatsApp -->
+                    <a href="https://wa.me/54911XXXXXXXX" target="_blank" class="flex items-center space-x-4 bg-gray-900 p-4 rounded-lg hover:bg-orange-500 transition duration-300">
+                        <!-- Ícono de WhatsApp -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.956-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.905 6.22l-1.359 4.954 5.068-1.339z"/></svg>
+                        <div>
+                            <p class="font-bold">WhatsApp</p>
+                            <!-- CAMBIAR: Poné acá tu número de teléfono -->
+                            <p class="text-gray-400">+54 9 11 XXXX-XXXX</p>
+                        </div>
+                    </a>
+
+                    <!-- Domicilio -->
+                    <div class="flex items-center space-x-4 bg-gray-900 p-4 rounded-lg">
+                        <!-- Ícono de Ubicación -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <div>
+                            <p class="font-bold">Ubicación</p>
+                            <!-- CAMBIAR: Poné acá tu dirección -->
+                            <p class="text-gray-400">La Reja, Moreno, Buenos Aires</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Horario -->
+                     <div class="flex items-center space-x-4 bg-gray-900 p-4 rounded-lg">
+                        <!-- Ícono de Horario -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <p class="font-bold">Horario de Atención</p>
+                            <!-- CAMBIAR: Poné acá tus horarios -->
+                            <p class="text-gray-400">Lunes a Viernes: 9 a 18 hs</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 <!-- CAMBIAR: Poné acá el nombre de tu taller -->. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
+
